@@ -1,0 +1,94 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.qasymphony:jBehaveDemo2:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.seleniumhq.selenium.fluent:fluent-selenium:jar -> duplicate declaration of version 1.17 @ line 83, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building jBehaveDemo2 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ jBehaveDemo2 ---
+[INFO] com.qasymphony:jBehaveDemo2:jar:1.0-SNAPSHOT
+[INFO] +- org.jbehave:jbehave-core:jar:4.1.1:compile
+[INFO] |  +- junit:junit:jar:4.12:compile
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:compile
+[INFO] |  +- org.hamcrest:hamcrest-integration:jar:1.3:compile
+[INFO] |  +- org.apache.commons:commons-collections4:jar:4.1:compile
+[INFO] |  +- commons-io:commons-io:jar:2.5:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] |  +- org.codehaus.plexus:plexus-utils:jar:3.0.22:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+[INFO] |  +- com.thoughtworks.paranamer:paranamer:jar:2.8:compile
+[INFO] |  +- com.thoughtworks.xstream:xstream:jar:1.4.9:compile
+[INFO] |  |  +- xmlpull:xmlpull:jar:1.1.3.1:compile
+[INFO] |  |  \- xpp3:xpp3_min:jar:1.1.4c:compile
+[INFO] |  \- com.google.code.gson:gson:jar:2.8.0:compile
+[INFO] +- org.jbehave:jbehave-core:zip:resources:4.1.1:compile
+[INFO] +- org.jbehave.site:jbehave-site-resources:zip:3.3:compile
+[INFO] +- org.jbehave.web:jbehave-web-selenium:jar:4.0-beta-1:compile
+[INFO] |  +- org.seleniumhq.selenium:selenium-leg-rc:jar:3.3.1:compile
+[INFO] |  |  \- org.seleniumhq.selenium:jetty-repacked:jar:9.4.1.v20170120:compile
+[INFO] |  \- com.codeborne:phantomjsdriver:jar:1.4.1:compile
+[INFO] +- org.jbehave:jbehave-spring:jar:4.1.1:compile
+[INFO] |  +- org.springframework:spring-context:jar:3.2.16.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:3.2.16.RELEASE:compile
+[INFO] |  |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:3.2.16.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-core:jar:3.2.16.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:3.2.16.RELEASE:compile
+[INFO] |  \- org.springframework:spring-test:jar:3.2.16.RELEASE:compile
+[INFO] +- org.seleniumhq.selenium.fluent:fluent-selenium:jar:1.17:test
+[INFO] +- org.hamcrest:hamcrest-all:jar:1.3:test
+[INFO] +- com.codahale.metrics:metrics-core:jar:3.0.0:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- org.seleniumhq.selenium:selenium-java:jar:3.4.0:test
+[INFO]    +- org.seleniumhq.selenium:selenium-api:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-chrome-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-edge-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-firefox-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-ie-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-opera-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-remote-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-safari-driver:jar:3.4.0:compile
+[INFO]    +- org.seleniumhq.selenium:selenium-support:jar:3.4.0:test
+[INFO]    +- cglib:cglib-nodep:jar:3.2.4:compile
+[INFO]    +- org.apache.commons:commons-exec:jar:1.3:compile
+[INFO]    +- commons-codec:commons-codec:jar:1.10:compile
+[INFO]    +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    +- org.w3c.css:sac:jar:1.3:test
+[INFO]    +- net.sourceforge.cssparser:cssparser:jar:0.9.22:test
+[INFO]    +- com.google.guava:guava:jar:21.0:compile
+[INFO]    +- net.sourceforge.htmlunit:htmlunit:jar:2.26:test
+[INFO]    +- net.sourceforge.htmlunit:htmlunit-core-js:jar:2.26:test
+[INFO]    +- net.sourceforge.htmlunit:neko-htmlunit:jar:2.25:test
+[INFO]    +- org.apache.httpcomponents:httpclient:jar:4.5.3:compile
+[INFO]    +- org.apache.httpcomponents:httpcore:jar:4.4.6:compile
+[INFO]    +- org.apache.httpcomponents:httpmime:jar:4.5.3:test
+[INFO]    +- org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:test
+[INFO]    +- org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:test
+[INFO]    +- net.java.dev.jna:jna:jar:4.1.0:compile
+[INFO]    +- net.java.dev.jna:jna-platform:jar:4.1.0:compile
+[INFO]    +- org.seleniumhq.selenium:htmlunit-driver:jar:2.26:test
+[INFO]    +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO]    +- org.eclipse.jetty.websocket:websocket-api:jar:9.4.3.v20170317:test
+[INFO]    +- org.eclipse.jetty.websocket:websocket-client:jar:9.4.3.v20170317:test
+[INFO]    |  \- org.eclipse.jetty:jetty-client:jar:9.4.3.v20170317:test
+[INFO]    |     \- org.eclipse.jetty:jetty-http:jar:9.4.3.v20170317:test
+[INFO]    +- org.eclipse.jetty.websocket:websocket-common:jar:9.4.3.v20170317:test
+[INFO]    +- xalan:serializer:jar:2.7.2:test
+[INFO]    +- xalan:xalan:jar:2.7.2:test
+[INFO]    +- xerces:xercesImpl:jar:2.11.0:test
+[INFO]    \- xml-apis:xml-apis:jar:1.4.01:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 14.504 s
+[INFO] Finished at: 2017-07-05T10:42:37-04:00
+[INFO] Final Memory: 12M/125M
+[INFO] ------------------------------------------------------------------------
