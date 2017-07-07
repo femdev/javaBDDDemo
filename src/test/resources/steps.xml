@@ -4,18 +4,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="driverProvider" class="org.jbehave.web.selenium.FirefoxWebDriverProvider" >
+    <bean id="driverProvider" class="org.jbehave.web.selenium.PropertyWebDriverProvider" >
     </bean>
 
     <bean id="webDriverProvider" class="org.jbehave.web.selenium.PerStoryWebDriverSteps">
         <constructor-arg ref="driverProvider"/>
     </bean>
 
-    <bean id="pageFactory" class="org.jbehave.tutorials.etsy.pages.PageFactory">
+    <bean id="pageFactory" class="PageObjects.PageFactory">
         <constructor-arg ref="driverProvider"/>
     </bean>
 
-    <bean id="etsySteps" class="org.jbehave.tutorials.etsy.steps.EtsyDotComSteps">
+    <bean id="contactFormSteps" class="Steps.ContactFormSteps">
         <constructor-arg ref="pageFactory"/>
     </bean>
 

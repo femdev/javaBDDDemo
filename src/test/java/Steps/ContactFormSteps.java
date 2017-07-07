@@ -13,6 +13,8 @@ import PageObjects.ContactScreen;
 public class ContactFormSteps {
     private ContactScreen contactScreen;
 
+    private String blogSubscribeText = "Subscribe To Our Blog";
+
     public ContactFormSteps(PageFactory pageFactory) {
         contactScreen = pageFactory.newContactScreen();
     }
@@ -22,9 +24,10 @@ public class ContactFormSteps {
         contactScreen.go();
     }
 
+    // This is a silly function.
     @When("I View the screen")
     public void iViewTheScreen() {
-        //assertTrue(contactScreen.isOpen???)
+        assert(contactScreen.getTitle().equals("Contact Us - QASymphony"));
     }
 
 //    @When("I Fill in all required fields except the comments and try to submit")
@@ -32,13 +35,13 @@ public class ContactFormSteps {
 //
 //    }
 
-    @Then("I should be to see blog subscribe text")
-    public void canSeeSubscribeToBlogText() {
-        assert(contactScreen.blogSubscribeTextIsVisible());
+    @Then("I should be able to see blog subscribe text")
+    public void thenIShouldBeAbleToSeeBlogSubscribeText() {
+        contactScreen.blogSubscribeText().getText().shouldBe(blogSubscribeText);
     }
 
     @Then("I should be able to see blog email placeholder text")
-    public void canSeeBlogPlaceholderText() {
+    public void thenIShouldBeAbleToSeeBlogEmailPlaceholderText() {
         assert(contactScreen.blogEmailPlaceholderTextIsVisible());
     }
 }

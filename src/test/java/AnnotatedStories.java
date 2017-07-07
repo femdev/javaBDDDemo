@@ -28,6 +28,8 @@ import static org.jbehave.core.io.CodeLocations.codeLocationFromClass;
 import static org.jbehave.core.reporters.Format.CONSOLE;
 import static org.jbehave.web.selenium.WebDriverHtmlOutput.WEB_DRIVER_HTML;
 
+// Annotation reference for JBehave: http://jbehave.org/reference/stable/annotations.html
+
 @RunWith(SpringAnnotatedEmbedderRunner.class)
 @Configure(using = SeleniumConfiguration.class, pendingStepStrategy = FailingUponPendingStep.class)
 @UsingEmbedder(embedder = Embedder.class, generateViewAfterStories = true, ignoreFailureInStories = true, ignoreFailureInView = false, storyTimeoutInSecs = 100, threads = 1, metaFilters = "-skip")
@@ -47,14 +49,14 @@ public class AnnotatedStories extends InjectableEmbedder {
                 crossReference.getStepMonitor());
         Format[] formats = new Format[] { new SeleniumContextOutput(seleniumContext), CONSOLE, WEB_DRIVER_HTML };
         StoryReporterBuilder reporterBuilder = new StoryReporterBuilder()
-                .withCodeLocation(codeLocationFromClass(Stories.class)).withFailureTrace(true)
+                .withCodeLocation(codeLocationFromClass(AnnotatedStories.class)).withFailureTrace(true)
                 .withFailureTraceCompression(true).withDefaultFormats().withFormats(formats)
                 .withCrossReference(crossReference);
 
         Configuration configuration = injectedEmbedder().configuration();
         configuration.useFailureStrategy(new FailingUponPendingStep())
                 .useStoryControls(new StoryControls().doResetStateBeforeScenario(false)).useStepMonitor(stepMonitor)
-                .useStoryLoader(new LoadFromClasspath(Stories.class))
+                .useStoryLoader(new LoadFromClasspath(AnnotatedStories.class))
                 .useStoryReporterBuilder(reporterBuilder);
         if (configuration instanceof SeleniumConfiguration) {
             SeleniumConfiguration seleniumConfiguration = (SeleniumConfiguration) configuration;
@@ -65,6 +67,6 @@ public class AnnotatedStories extends InjectableEmbedder {
 
     protected List<String> storyPaths() {
         return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()).getFile(),
-                asList("**/" + System.getProperty("storyFilter", "*") + ".story"), null);
+                asList("*/" + System.getProperty("storyFilter", "*") + ".story"), null);
     }
 }

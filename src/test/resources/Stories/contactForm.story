@@ -8,5 +8,4 @@ Scenario: Contact Screen Content
 
 Given The contacts screen is open
 When I View the screen
-Then I should be to see blog subscribe text
-And  I should be able to see blog email placeholder text
+Then I should be able to see blog subscribe text
